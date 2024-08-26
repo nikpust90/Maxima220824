@@ -105,14 +105,14 @@ public class Main {
         //Годы 1600 и 2000 - високосные, так как они кратны 100 и кратны 400.
         //Годы 2100, 2200 и 2300 - не високосные.
 
-        Scanner scanner2 = new Scanner(System.in);
-        double entered_number = scanner2.nextByte();
-        double divisionBy4 = entered_number / 4;
-        if (divisionBy4 % 1 == 0){
-            System.out.println("количество дней в этом году: 366");
-        } else {
-
-        }
+//        Scanner scanner2 = new Scanner(System.in);
+//        double entered_number = scanner2.nextByte();
+//        double divisionBy4 = entered_number / 4;
+//        if (divisionBy4 % 1 == 0){
+//            System.out.println("количество дней в этом году: 366");
+//        } else {
+//
+//        }
 
 
         //7
