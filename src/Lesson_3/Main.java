@@ -84,8 +84,8 @@ public class Main {
 //        }
 //        System.out.println(positiveOrNegativeNumber);
 
-        //
-        //
+
+
         //6
         //Написать программу, которая, в зависимости от того числа, которое мы ей подадим (год)
         //, будет определять количество дней в году. Результат вывести на экран в следующем виде:
@@ -104,8 +104,17 @@ public class Main {
         //Так, годы 1700, 1800 и 1900 не являются високосными, так как они кратны 100 и не кратны 400.
         //Годы 1600 и 2000 - високосные, так как они кратны 100 и кратны 400.
         //Годы 2100, 2200 и 2300 - не високосные.
-        //
-        //
+
+        Scanner scanner2 = new Scanner(System.in);
+        double entered_number = scanner2.nextByte();
+        double divisionBy4 = entered_number / 4;
+        if (divisionBy4 % 1 == 0){
+            System.out.println("количество дней в этом году: 366");
+        } else {
+
+        }
+
+
         //7
         // Объявить три переменных (a, b, c) - стороны предполагаемого треугольника.
         //Определить возможность существования треугольника по сторонам.
@@ -160,27 +169,26 @@ public class Main {
         //Пример для числа 5:
         //зелёный
 
-        int interval_green = 3;
-        int interval_red = 4;
-        int interval_yellow = 5;
-
-        Scanner scanner2 = new Scanner(System.in);
-        double entered_number = scanner2.nextByte();
-        //double entered_number = 48;
-        double a1 = entered_number / interval_yellow;//1
-        if (a1 % 1 == 0){
-            System.out.println("Горит Желтый");
-        } else {
-            double g1 = a1 - (a1 % 1);
-            double c1 = g1 * interval_yellow;
-            double remainder_of_the_number = entered_number - c1;
-            if (remainder_of_the_number <= interval_green){
-                System.out.println("Горит Зеленый");
-            } else {
-                System.out.println("Горит Красный");
-            }
-            //int b = a
-        }
+//        int interval_green = 3;
+//        int interval_red = 4;
+//        int interval_yellow = 5;
+//
+//        Scanner scanner2 = new Scanner(System.in);
+//        double entered_number = scanner2.nextByte();
+//        //double entered_number = 48;
+//        double a1 = entered_number / interval_yellow;//1
+//        if (a1 % 1 == 0 || entered_number <= interval_green){
+//            System.out.println("Горит Желтый");
+//        } else {
+//            double g1 = a1 - (a1 % 1);
+//            double c1 = g1 * interval_yellow;
+//            double remainder_of_the_number = entered_number - c1;
+//            if (remainder_of_the_number <= interval_green){
+//                System.out.println("Горит Зеленый");
+//            } else {
+//                System.out.println("Горит Красный");
+//            }
+//        }
 
     }
 }
