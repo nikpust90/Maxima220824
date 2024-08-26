@@ -164,13 +164,21 @@ public class Main {
         int interval_red = 4;
         int interval_yellow = 5;
 
-//        Scanner scanner2 = new Scanner(System.in);
-//        double entered_number = scanner2.nextByte();
-        double entered_number = 26;
+        Scanner scanner2 = new Scanner(System.in);
+        double entered_number = scanner2.nextByte();
+        //double entered_number = 48;
         double a1 = entered_number / interval_yellow;//1
         if (a1 % 1 == 0){
             System.out.println("Горит Желтый");
         } else {
+            double g1 = a1 - (a1 % 1);
+            double c1 = g1 * interval_yellow;
+            double remainder_of_the_number = entered_number - c1;
+            if (remainder_of_the_number <= interval_green){
+                System.out.println("Горит Зеленый");
+            } else {
+                System.out.println("Горит Красный");
+            }
             //int b = a
         }
 
