@@ -167,7 +167,7 @@ public class Main {
 //        Scanner scanner2 = new Scanner(System.in);
 //        double entered_number = scanner2.nextByte();
         double entered_number = 26;
-        double a1 = entered_number / interval_yellow;
+        double a1 = entered_number / interval_yellow;//1
         if (a1 % 1 == 0){
             System.out.println("Горит Желтый");
         } else {
