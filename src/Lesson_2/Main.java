@@ -29,7 +29,7 @@ public class Main {
         int banana = 3;
         int result_hungry = time_hungry / banana;
         int result_wellFed = time_wellFed / banana;
-        double total = (double)result_wellFed / (double)result_hungry;
+        int total = result_wellFed - result_hungry;
         System.out.println(total);
     }
 }
