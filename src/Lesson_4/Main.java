@@ -150,23 +150,26 @@ public class Main {
         int[]  Arr10;
         Arr10 = new  int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int counter_number1 = 0;
-        String line_counter = "";
-        while (counter_number1 <= 10) {
-            counter_number1 = counter_number1 + 1;
-            line_counter = line_counter + Arr10[counter_number1];
 
 
-            Scanner scanner = new Scanner(System.in);
-            int number = scanner.nextInt();
-            if (number == -1){
-                counter_number = counter_number + number;
-                break;
-            }else {
-                counter_number = counter_number + number;
+        int numberOne = 0;
+        int numbertwo = 0;
+        while (numberOne < 10) {
+            String line_counter = "";
+
+            while (numbertwo < 10) {
+
+                line_counter = line_counter + Arr10[counter_number1] + " ";
+                counter_number1 = counter_number1 + 1;
+                numbertwo = numbertwo + 1;
+
+
             }
-
+            System.out.println(line_counter);
         }
-        System.out.println(counter_number);
+
+
+
         //6
         //Ввести с клавиатуры строку name.
         //Ввести с клавиатуры дату рождения (три числа): y, m, d.
