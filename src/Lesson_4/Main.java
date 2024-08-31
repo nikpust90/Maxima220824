@@ -15,28 +15,28 @@ public class Main {
         //Пример: m=2, n=4
         //8888
         //8888
-//        Scanner scanner = new Scanner(System.in);
-//        int m = scanner.nextInt();
-//
-//        Scanner scanner1 = new Scanner(System.in);
-//        int n = scanner1.nextInt();
-//
-//        int[] MyArray;
-//        MyArray = new int[]{8,8,8,8};
-//
-//
-//        for (int i = 0; i < m; i++) {
+        Scanner scanner = new Scanner(System.in);
+        int m = scanner.nextInt();
 
-//            String line_counter = "";
+        Scanner scanner1 = new Scanner(System.in);
+        int n = scanner1.nextInt();
 
-//            for (int i1 = 0; i1 < n; i1++) {
+        int[] MyArray;
+        MyArray = new int[]{8,8,8,8};
 
-//                line_counter = line_counter + MyArray[i1];
-//
-//            }
 
-//            System.out.println(line_counter);
-//        }
+        for (int i = 0; i < m; i++) {
+
+            String line_counter = "";
+
+            for (int i1 = 0; i1 < n; i1++) {
+
+                line_counter = line_counter + MyArray[i1];
+
+            }
+
+            System.out.println(line_counter);
+        }
         //2
         //Используя цикл for вывести на экран прямоугольный треугольник из восьмёрок со сторонами 10 и 10.
         //
@@ -53,18 +53,18 @@ public class Main {
         //888888888
         //8888888888
 
-//        int[] MyArray10;
-//        MyArray10 = new int[]{8,8,8,8,8,8,8,8,8,8};
-//
-//
-//        for (int i = 0; i < 10; i++) {
-//            String line_counter = "";
-//            for (int i1 = 0; i1 < i; i1++) {
-//                line_counter = line_counter + MyArray10[i1];
-//            }
-//            System.out.println(line_counter);
-//
-//        }
+        int[] MyArray10;
+        MyArray10 = new int[]{8,8,8,8,8,8,8,8,8,8};
+
+
+        for (int i = 0; i < 10; i++) {
+            String line_counter = "";
+            for (int i1 = 0; i1 < i; i1++) {
+                line_counter = line_counter + MyArray10[i1];
+            }
+            System.out.println(line_counter);
+
+        }
 
         //3
         //
@@ -73,31 +73,31 @@ public class Main {
         //Т.е. не самое большое и не самое маленькое.
         //Если все числа равны, вывести любое из них.
 
-//        Scanner scanner = new Scanner(System.in);
-//        int a = scanner.nextInt();
-//
-//        Scanner scanner1 = new Scanner(System.in);
-//        int b = scanner1.nextInt();
-//
-//        Scanner scanner2 = new Scanner(System.in);
-//        int c = scanner2.nextInt();
-//
-//
-//        int line_counter = 0;
-//        if (a > b && a < c || a < b && a > c){
-//            line_counter = a;
-//        }
-//        if (b > a && b < c || b < a && b > c){
-//            line_counter = b;
-//        }
-//        if (c > b && c < a || c < b && c > a){
-//            line_counter = c;
-//        }
-//        if (c == b && c == a){
-//            line_counter = c;
-//        }
-//
-//        System.out.println(line_counter);
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+
+        Scanner scanner1 = new Scanner(System.in);
+        int b = scanner1.nextInt();
+
+        Scanner scanner2 = new Scanner(System.in);
+        int c = scanner2.nextInt();
+
+
+        int line_counter = 0;
+        if (a > b && a < c || a < b && a > c){
+            line_counter = a;
+        }
+        if (b > a && b < c || b < a && b > c){
+            line_counter = b;
+        }
+        if (c > b && c < a || c < b && c > a){
+            line_counter = c;
+        }
+        if (c == b && c == a){
+            line_counter = c;
+        }
+
+        System.out.println(line_counter);
 
 
 
@@ -116,19 +116,19 @@ public class Main {
         //        break;
         //}
 
-//        int counter_number = 0;
-//        while (true) {
-//            Scanner scanner = new Scanner(System.in);
-//            int number = scanner.nextInt();
-//            if (number == -1){
-//                counter_number = counter_number + number;
-//                break;
-//            }else {
-//                counter_number = counter_number + number;
-//            }
-//
-//        }
-//        System.out.println(counter_number);
+        int counter_number = 0;
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            int number = scanner.nextInt();
+            if (number == -1){
+                counter_number = counter_number + number;
+                break;
+            }else {
+                counter_number = counter_number + number;
+            }
+
+        }
+        System.out.println(counter_number);
 
         //5
         //Вывести на экран таблицу умножения 10х10 используя цикл while.
@@ -146,26 +146,30 @@ public class Main {
         //8 16 24 32 40 48 56 64 72 80
         //9 18 27 36 45 54 63 72 81 90
         //10 20 30 40 50 60 70 80 90 100
-        int counter_number = 0;
+
         int[]  Arr10;
         Arr10 = new  int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int counter_number1 = 0;
 
 
-        int numberOne = 0;
-        int numbertwo = 0;
-        while (numberOne < 10) {
+
+        int numberOne = 1;
+
+        while (numberOne < 11) {
             String line_counter = "";
+            int numbertwo = 1;
+            int counter_number1 = 0;
 
-            while (numbertwo < 10) {
+            while (numbertwo < 11) {
 
                 line_counter = line_counter + Arr10[counter_number1] + " ";
+                Arr10[counter_number1] = Arr10[counter_number1] + numbertwo;
                 counter_number1 = counter_number1 + 1;
                 numbertwo = numbertwo + 1;
 
 
             }
             System.out.println(line_counter);
+            numberOne = numberOne + 1;
         }
 
 
@@ -183,6 +187,20 @@ public class Main {
         //Пример вывода:
         //Меня зовут Вася.
         //Я родился 15.2.1988
+
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+
+        Scanner scanner1 = new Scanner(System.in);
+        int d = scanner1.nextInt();
+
+        Scanner scanner2 = new Scanner(System.in);
+        int m = scanner2.nextInt();
+
+        Scanner scanner3 = new Scanner(System.in);
+        int y = scanner3.nextInt();
+
+        System.out.println("Меня зовут " + name + ". Я родился " + d + "." + m + "." + y);
 
     }
 }
