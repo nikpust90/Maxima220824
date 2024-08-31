@@ -74,15 +74,14 @@ public class Main {
         //Вывести результат в консоль.
 
 //        Scanner scanner3 = new Scanner(System.in);
-//        int positiveOrNegativeNumber = scanner3.nextByte();
-//        if (positiveOrNegativeNumber > 0){
-//            positiveOrNegativeNumber = positiveOrNegativeNumber * 2;
-//        } else if (positiveOrNegativeNumber < 0) {
-//            positiveOrNegativeNumber = positiveOrNegativeNumber + 1;
-//        } else if (positiveOrNegativeNumber == 0) {
-//            positiveOrNegativeNumber = 0;
-//        }
-//        System.out.println(positiveOrNegativeNumber);
+//        int value = scanner3.nextByte();
+//
+//        if (value > 0){
+//            value = value * 2;
+//        } else if (value < 0) {
+//            value = value + 1;
+//
+//        System.out.println(value);
 
 
 
@@ -111,26 +110,17 @@ public class Main {
 //        boolean is_leap_year = false;
 //
 //
-//        if (year % 4 == 0) {
+//        if (year % 4 == 0 || (year % 100 == 0 && year % 400 == 0)) {
 //            is_leap_year = true;
-//
-//
-//            if (year % 100 == 0) {
-//
-//                if (year % 400 == 0)
-//                    is_leap_year = true;
-//                else
-//                    is_leap_year = false;
-//            }
-//        }
-//        else {
+//        }else{
 //            is_leap_year = false;
 //        }
 //
-//        if (!is_leap_year)
+//        if (!is_leap_year){
 //            System.out.println(year + " Не высокостный год");
-//        else
+//        }else{
 //            System.out.println(year + " Высокостный год");
+//        }
 
 
 
@@ -188,26 +178,26 @@ public class Main {
         //Пример для числа 5:
         //зелёный
 
-//        int interval_green = 3;
-//        int interval_red = 4;
-//        int interval_yellow = 5;
-//
-//        Scanner scanner2 = new Scanner(System.in);
-//        double entered_number = scanner2.nextByte();
-//        //double entered_number = 48;
-//        double a1 = entered_number / interval_yellow;//1
-//        if (a1 % 1 == 0 || entered_number <= interval_green){
-//            System.out.println("Горит Желтый");
-//        } else {
-//            double g1 = a1 - (a1 % 1);
-//            double c1 = g1 * interval_yellow;
-//            double remainder_of_the_number = entered_number - c1;
-//            if (remainder_of_the_number <= interval_green){
-//                System.out.println("Горит Зеленый");
-//            } else {
-//                System.out.println("Горит Красный");
-//            }
-//        }
+        int interval_green = 3;
+        int interval_red = 4;
+        int interval_yellow = 5;
+
+        Scanner scanner2 = new Scanner(System.in);
+        double entered_number = scanner2.nextByte();
+
+        double a1 = entered_number / interval_yellow;
+        if (a1 % 1 == 0){
+            System.out.println("Горит Желтый");
+        } else {
+            double g1 = a1 - (a1 % 1); //получим целое число до запятой
+            double c1 = g1 * interval_yellow;
+            double remainder_of_the_number = entered_number - c1; //нужно получить число последнее которое делится на пять без остатка и остаток введенного числа за минусом будет равен интервалу светофора равный переменным которые объявил выше
+            if (remainder_of_the_number <= interval_green){
+                System.out.println("Горит Зеленый");
+            } else {
+                System.out.println("Горит Красный");
+            }
+        }
 
     }
 }
