@@ -13,33 +13,26 @@ public class work6 {
         //Вывести на экран максимальное и минимальное числа через пробел.
         int[] myArr20;
         myArr20 = new int[20];
+        Scanner scanner6 = new  Scanner(System.in);
 
-        for (int i = 0; i < 19; i++) {
-            Scanner scanner6 = new  Scanner(System.in);
+        for (int i = 0; i < 20; i++) {
             myArr20[i] = scanner6.nextInt();
         }
 
-        int leastNumber;
-        int maxNumber;
+        int leastNumber = myArr20[0];
+        int maxNumber = myArr20[0];
 
-
-        while (true){
-            boolean checkTrue = true;
-            for (int i = 0; i < 19; i++) {
-                if (myArr20[i] > myArr20[i + 1]){
-                    int changeNumber = myArr20[i+1];
-                    myArr20[i+1] = myArr20[i];
-                    myArr20[i] = changeNumber;
-                    checkTrue = false;
-                }
+        for (int i = 1; i < 20; i++) {
+            if (myArr20[i] > maxNumber) {
+                maxNumber = myArr20[i];
             }
-            if (checkTrue == true) {
-                leastNumber = myArr20[0];
-                maxNumber = myArr20[myArr20.length - 1];
-                break;
+            if (myArr20[i] < leastNumber) {
+                leastNumber = myArr20[i];
+
             }
 
         }
+
 
         System.out.println(leastNumber + " " + maxNumber);
     }

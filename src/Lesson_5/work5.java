@@ -21,8 +21,9 @@ public class work5 {
         int[] twoArr10;
         twoArr10 = new int[10];
 
+        Scanner scanner4 = new Scanner(System.in);
+
         for (int i = 0; i < 20; i++) {
-            Scanner scanner4 = new Scanner(System.in);
             myArr20[i] = scanner4.nextInt();
         }
         for (int i = 0; i < 20; i++) {

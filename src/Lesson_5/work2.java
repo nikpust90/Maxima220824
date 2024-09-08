@@ -14,31 +14,27 @@ public class work2 {
         int[] myArr10;
         myArr10 = new int[10];
 
-        for (int i = 0; i < 9; i++) {
-            Scanner scanner1 = new Scanner(System.in);
+        Scanner scanner1 = new Scanner(System.in);
+
+        for (int i = 0; i < 10; i++) {
+
             myArr10[i] = scanner1.nextInt();
 
         }
 
-        boolean checktrue = false;
-        while (true){
-            checktrue = true;
-            for (int i = 0; i < 9; i++) {
-                if (myArr10[i] > myArr10[i + 1]) {
-                    int next_number = myArr10[i];
-                    myArr10[i] = myArr10[i + 1];
-                    myArr10[i + 1] = next_number;
-                    checktrue = false;
+        int maxNumber = myArr10[0];
 
-                }
+        for (int i = 1; i < 10; i++) {
+            if (myArr10[i] > maxNumber) {
+                maxNumber = myArr10[i];
             }
-            if (checktrue == true){
-                break;
-            }
+        }
 
-        }
-        for (int i = 0; i < 10; i++) {
-            System.out.println(myArr10[i]);
-        }
+        System.out.println(maxNumber);
+
+
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println(myArr10[i]);
+//        }
     }
 }

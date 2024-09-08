@@ -10,9 +10,9 @@ public class work7 {
         //Задача: Написать программу, которая вводит с клавиатуры 20 чисел и выводит их в убывающем порядке.
         int[] myArr20;
         myArr20 = new int[20];
+        Scanner scanner6 = new  Scanner(System.in);
 
-        for (int i = 0; i < 19; i++) {
-            Scanner scanner6 = new  Scanner(System.in);
+        for (int i = 0; i < 20; i++) {
             myArr20[i] = scanner6.nextInt();
         }
 

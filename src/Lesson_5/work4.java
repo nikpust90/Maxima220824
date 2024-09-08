@@ -14,8 +14,10 @@ public class work4 {
 
         int[] myArr10;
         myArr10 = new int[10];
+
+        Scanner scanner3 = new Scanner(System.in);
+
         for (int i = 0; i < 10; i++) {
-            Scanner scanner3 = new Scanner(System.in);
             myArr10[i] = scanner3.nextInt();
         }
         for (int i = 9; i >= 0; i--) {

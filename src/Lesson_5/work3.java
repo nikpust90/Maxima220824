@@ -20,8 +20,9 @@ public class work3 {
         int[] intsArr;
         intsArr = new int[10];
 
+        Scanner scanner2 = new Scanner(System.in);
+
         for (int i = 0; i < 9; i++) {
-            Scanner scanner2 = new Scanner(System.in);
             stringsArr[i] = scanner2.nextLine();
             intsArr[i] = stringsArr[i].length();
         }

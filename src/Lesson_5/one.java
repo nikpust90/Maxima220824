@@ -13,9 +13,10 @@ public class one {
 
         String[] myArray;
         myArray = new String[10];
+        Scanner scanner1 = new Scanner(System.in);
 
         for (int i = 0; i < 10; i++) {
-            Scanner scanner1 = new Scanner(System.in);
+
             myArray[i] = scanner1.nextLine();
 
         }
