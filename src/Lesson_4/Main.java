@@ -1,9 +1,5 @@
 package Lesson_4;
 
-import javax.sound.sampled.SourceDataLine;
-import java.lang.reflect.Array;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -15,25 +11,25 @@ public class Main {
         //Пример: m=2, n=4
         //8888
         //8888
-        Scanner scanner = new Scanner(System.in);
-        int m = scanner.nextInt();
-
-        Scanner scanner1 = new Scanner(System.in);
-        int n = scanner1.nextInt();
-
-
-        for (int i = 0; i < m; i++) {
-
-            String lineResult = "";
-
-            for (int i1 = 0; i1 < n; i1++) {
-
-                lineResult = lineResult + "8";
-
-            }
-
-            System.out.println(lineResult);
-        }
+//        Scanner scanner = new Scanner(System.in);
+//        int m = scanner.nextInt();
+//
+//        Scanner scanner1 = new Scanner(System.in);
+//        int n = scanner1.nextInt();
+//
+//
+//        for (int i = 0; i < m; i++) {
+//
+//            String lineResult = "";
+//
+//            for (int i1 = 0; i1 < n; i1++) {
+//
+//                lineResult = lineResult + "8";
+//
+//            }
+//
+//            System.out.println(lineResult);
+//        }
         //2
         //Используя цикл for вывести на экран прямоугольный треугольник из восьмёрок со сторонами 10 и 10.
         //
@@ -53,47 +49,44 @@ public class Main {
 
 
 
-        for (int i = 0; i < 10; i++) {
-            String lineResult = "";
-            for (int i1 = 0; i1 < i; i1++) {
-                lineResult = lineResult + "8";
-            }
-            System.out.println(lineResult);
+//        for (int i = 0; i < 10; i++) {
+//            String lineResult = "";
+//            for (int i1 = 0; i1 < i; i1++) {
+//                lineResult = lineResult + "8";
+//            }
+//            System.out.println(lineResult);
+//
+//        }
 
-        }
-
-        //3
-        //
-        //
-        //Ввести с клавиатуры три числа, вывести на экран среднее из них.
-        //Т.е. не самое большое и не самое маленькое.
-        //Если все числа равны, вывести любое из них.
-
-        Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-
-        Scanner scanner1 = new Scanner(System.in);
-        int b = scanner1.nextInt();
-
-        Scanner scanner2 = new Scanner(System.in);
-        int c = scanner2.nextInt();
-
-
-        int middleNumber = 0;
-        if (a > b && a < c || a < b && a > c){
-            middleNumber  = a;
-        }
-        if (b > a && b < c || b < a && b > c){
-            middleNumber  = b;
-        }
-        if (c > b && c < a || c < b && c > a){
-            middleNumber  = c;
-        }
-        if (c == b && c == a){
-            middleNumber  = c;
-        }
-
-        System.out.println(middleNumber);
+//        //3
+//        //
+//        //
+//        //Ввести с клавиатуры три числа, вывести на экран среднее из них.
+//        //Т.е. не самое большое и не самое маленькое.
+//        //Если все числа равны, вывести любое из них.
+//
+//        Scanner scanner1 = new Scanner(System.in);
+//        int a = scanner1.nextInt();
+//
+//        int b = scanner1.nextInt();
+//        int c = scanner1.nextInt();
+//
+//
+//        int middleNumber = 0;
+//        if (a > b && a < c || a < b && a > c){
+//            middleNumber  = a;
+//        }
+//        if (b > a && b < c || b < a && b > c){
+//            middleNumber  = b;
+//        }
+//        if (c > b && c < a || c < b && c > a){
+//            middleNumber  = c;
+//        }
+//        if (c == b && c == a){
+//            middleNumber  = c;
+//        }
+//
+//        System.out.println(middleNumber);
 
 
 
@@ -112,18 +105,18 @@ public class Main {
         //        break;
         //}
 
-        int sumNumber = 0;
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-
-            int number = scanner.nextInt();
-            sumNumber = sumNumber + number;
-            if (number == -1){
-                break;
-            }
-
-        }
-        System.out.println(sumNumber);
+//        int sumNumber = 0;
+//        Scanner scanner = new Scanner(System.in);
+//        while (true) {
+//
+//            int number = scanner.nextInt();
+//            sumNumber = sumNumber + number;
+//            if (number == -1){
+//                break;
+//            }
+//
+//        }
+//        System.out.println(sumNumber);
 
         //5
         //Вывести на экран таблицу умножения 10х10 используя цикл while.
@@ -145,13 +138,13 @@ public class Main {
 
         for (int x = 1; x < 11; x++) {
             int numberOne = 0;
-            String line_counter = "";
+            String ResultString = "";
 
             for (int i = 0; i < 10; i++) {
                 numberOne = numberOne + x;
-                line_counter = line_counter + numberOne + " ";
+                ResultString = ResultString + numberOne + " ";
             }
-            System.out.println(line_counter);
+            System.out.println(ResultString);
 
         }
 
@@ -173,21 +166,18 @@ public class Main {
         //Меня зовут Вася.
         //Я родился 15.2.1988
 
-        Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-
-        Scanner scanner1 = new Scanner(System.in);
-        int d = scanner1.nextInt();
-
-        Scanner scanner2 = new Scanner(System.in);
-        int m = scanner2.nextInt();
-
-        Scanner scanner3 = new Scanner(System.in);
-        int y = scanner3.nextInt();
-
-        String data = d + "." + m + "." + y;
-
-        System.out.println(String.format("Меня зовут %s. Я родился %s", name, data));
+//        Scanner scanner = new Scanner(System.in);
+//        String name = scanner.nextLine();
+//
+//        int d = scanner.nextInt();
+//
+//        int m = scanner.nextInt();
+//
+//        int y = scanner.nextInt();
+//
+//        String data = d + "." + m + "." + y;
+//
+//        System.out.println(String.format("Меня зовут %s. Я родился %s", name, data));
 
     }
 }
