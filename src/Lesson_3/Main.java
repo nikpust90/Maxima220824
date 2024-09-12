@@ -104,23 +104,15 @@ public class Main {
         //Годы 1600 и 2000 - високосные, так как они кратны 100 и кратны 400.
         //Годы 2100, 2200 и 2300 - не високосные.
 
-        Scanner scanner4 = new Scanner(System.in);
-        double year = scanner4.nextInt();
+//        Scanner scanner4 = new Scanner(System.in);
+//        int year = scanner4.nextInt();
+//
+//        if (year % 400 == 0 || (year % 400 != 0 && year % 100 != 0 && year % 4 == 0)) {
+//            System.out.println(year + " Высокостный год");
+//        }else{
+//            System.out.println(year + " обычный год");
+//        }
 
-        boolean is_leap_year = false;
-
-
-        if (year % 4 == 0 || (year % 100 == 0 && year % 400 == 0)) {
-            is_leap_year = true;
-        }else{
-            is_leap_year = false;
-        }
-
-        if (!is_leap_year){
-            System.out.println(year + " Не высокостный год");
-        }else{
-            System.out.println(year + " Высокостный год");
-        }
 
 
 
@@ -178,26 +170,20 @@ public class Main {
         //Пример для числа 5:
         //зелёный
 
-        int interval_green = 3;
-        int interval_red = 4;
-        int interval_yellow = 5;
 
-        Scanner scanner2 = new Scanner(System.in);
-        double entered_number = scanner2.nextByte();
+//        Scanner scanner2 = new Scanner(System.in);
+//        double entered_number = scanner2.nextByte();
+//
+//        double reminder = entered_number % 5;
+//
+//        if (reminder < 3){
+//            System.out.println("Горит Зеленый");
+//        } else if (reminder < 4){
+//            System.out.println("Горит Желтый");
+//        } else {
+//            System.out.println("Горит Красный");
+//        }
 
-        double result_of_division = entered_number / interval_yellow;
-        if (result_of_division % 1 == 0){
-            System.out.println("Горит Желтый");
-        } else {
-            double integer_to_decimal_point = result_of_division - (result_of_division % 1); //получим целое число до запятой
-            double intermediate_result_to_obtain_the_final_result = integer_to_decimal_point * interval_yellow;
-            double remainder_of_the_number = entered_number - intermediate_result_to_obtain_the_final_result; //нужно получить число последнее которое делится на пять без остатка и остаток введенного числа за минусом будет равен интервалу светофора равный переменным которые объявил выше
-            if (remainder_of_the_number <= interval_green){
-                System.out.println("Горит Зеленый");
-            } else {
-                System.out.println("Горит Красный");
-            }
-        }
 
     }
 }
