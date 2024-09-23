@@ -12,18 +12,12 @@ public class work_4 {
 
         int numberOne = 5;
         int powerOne = 2;
-        int numberPowerOne = pow(numberOne, powerOne);
+        System.out.println(masterPow(numberOne, powerOne));
 
-        int numberTwo = 8;
-        int powerTwo = 4;
-        int numberPowerTwo = pow(numberTwo, powerTwo);
+    }
 
-        int numberSum = numberPowerOne + numberPowerTwo;
-
-
-        System.out.println(numberSum);
-
-
+    public static int masterPow(int numberOne, int powerOne){
+        return pow(numberOne,powerOne) + pow(numberOne,powerOne);
     }
 
     public static int pow(int number, int power){

@@ -26,13 +26,10 @@ public class work_4 {
         for (int i = 0; i < 10; i++) {
 
             stringsArr[i]  = scanner.nextLine();
-
-        }
-        for (int i = 0; i < 10; i++) {
-
             intArr[i]  = stringsArr[i].length();
 
         }
+
 
 
     }

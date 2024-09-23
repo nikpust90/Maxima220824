@@ -21,15 +21,23 @@ public class work_5 {
             stringsArr[i]  = scanner.nextLine();
 
         }
-
+        boolean resetFirstElement = false;
         for (int i = 0; i < 6; i++) {
-            if (stringsArr[i] != null) {
-                for (int j = i; j < 5; j++) {
-                    if (stringsArr[i].equals(stringsArr[j + 1])) {
-                        stringsArr[j + 1] = null;
-                    }
+
+            if (stringsArr[i] == null) {
+                continue;
+            }
+            for (int j = i + 1; j < 6; j++) {
+                if (stringsArr[i].equals(stringsArr[j])) {
+                    stringsArr[j] = null;
+                    resetFirstElement = true;
                 }
             }
+            if (resetFirstElement){
+                stringsArr[i] = null;
+                resetFirstElement = false;
+            }
+
         }
 
         

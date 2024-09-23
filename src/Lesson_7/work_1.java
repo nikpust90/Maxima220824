@@ -9,8 +9,12 @@ public class work_1 {
         //
         //Напишите метод, с помощью которого можно было бы возводить число, переданное в сигнатуру метода, в куб.
 
-        double numbercube = Math.pow(4,2);
+        double numberCube = mathPowOne(4);
 
 
+    }
+
+    public static double mathPowOne(double number){
+        return Math.pow(number,2);
     }
 }

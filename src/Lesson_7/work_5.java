@@ -1,8 +1,13 @@
 package Lesson_7;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class work_5 {
+
+    private static Object scanner;
+
     public static void main(String[] args) {
         //5
         //
@@ -18,9 +23,9 @@ public class work_5 {
         //Метод main() - должен считывать 2 числа (с помощью getInt()), считать операцию (с помощью getOperation(), передать все методу calc() и вывести на экран результат.
 
         Scanner scanner = new Scanner(System.in);
-        int number1 = getInt(scanner.nextInt());
-        int number2 = getInt(scanner.nextInt());
-        char operation = getOperation(scanner.next().charAt(0));
+        int number1 = getInt(scanner);
+        int number2 = getInt(scanner);
+        char operation = getOperation(scanner);
         int result = calc(number1, number2, operation);
 
         System.out.println(result);
@@ -28,29 +33,28 @@ public class work_5 {
 
     }
 
-    public static int getInt(int number){
+    public static  int getInt(Scanner scanner1){
 
-        return number;
+        return  scanner1.nextInt();
     }
 
-    public static char getOperation(char operation){
+    public static char getOperation(Scanner scanner1){
 
-        return operation;
+        return scanner1.next().charAt(0);
     }
 
     public static int calc(int number1, int number2, char operation){
-        int result = 0;
-        if (operation == '+'){
-            result = number1 + number2;
-        } else if (operation == '-') {
-            result = number1 - number2;
-        } else if (operation == '/') {
-            result = number1 / number2;
-        } else if (operation == '*') {
-            result = number1 * number2;
+
+        switch (operation) {
+            case '+':
+                return number1 + number2;
+            case '-':
+                return  number1 - number2;
+            case '/':
+                return  number1 / number2;
+            case '*':
+                return  number1 * number2;
+            default: return 0;
         }
-
-
-        return result;
     }
 }

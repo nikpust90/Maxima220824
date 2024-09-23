@@ -15,11 +15,12 @@ public class work_2 {
         for (int i = 0; i < 5; i++) {
 
             String line  = scanner.nextLine();
+
             if (line.length() > lengthLineMax){
                 lengthLineMax = line.length();
                 longString = line;
             }
-            if (line.length() <= lengthLineMin){
+            if (line.length() <= lengthLineMin || i == 0){
                 lengthLineMin = line.length();
                 shortString = line;
             }

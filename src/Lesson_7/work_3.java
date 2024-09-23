@@ -10,10 +10,12 @@ public class work_3 {
 
         int numberOne = 8;
         int numberTwo = 4;
-        int numberMin = Math.min(numberOne, numberTwo);
+        int numberMin = numberMin(numberOne, numberTwo);
 
         System.out.println(numberMin);
+    }
 
-
+    public static int numberMin(int numberOne, int numberTwo){
+        return Math.min(numberOne, numberTwo);
     }
 }

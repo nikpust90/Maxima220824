@@ -10,8 +10,11 @@ public class work_2 {
         //и false, если число меньше 5
 
         int number = 8;
-        System.out.println(number > 5);
+        System.out.println(numberMinOrMaxFive(number));
 
+    }
 
+    public static boolean numberMinOrMaxFive(int number){
+        return number > 5;
     }
 }
