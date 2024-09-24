@@ -50,8 +50,13 @@ public class work_5 {
                 return number1 + number2;
             case '-':
                 return  number1 - number2;
-            case '/':
+            case '/' :{
+                if (number2 == 0){
+                    System.out.println("Деление на ноль!");
+                    return 0;
+                }
                 return  number1 / number2;
+            }
             case '*':
                 return  number1 * number2;
             default: return 0;
