@@ -1,11 +1,11 @@
 package Lesson_8;
 
 public class Human {
-    String name;
-    boolean gender;
-    int age;
-    Human mother;
-    Human father;
+    private String name;
+    private boolean gender;
+    private int age;
+    private Human mother;
+    private Human father;
 
     public Human(String name, boolean gender, int age) {
         this.name = name;
@@ -22,21 +22,21 @@ public class Human {
     }
 
     public String toString(){
-        if (mother == null || father == null){
-            if (gender) {
-                return "Имя - " + name + " пол - Женский"  + " Возраст " + age;
-            }else {
-                return "Имя - " + name + " пол - Мужской"  + " Возраст " + age;
-            }
-        }else {
-            if (gender) {
-                return "Имя - " + name + " пол - Женский" + " Возраст " + age + " Мама - " + mother.name + " Папа - " + father.name;
-            }else {
-                return "Имя - " + name + " пол - Мужской" + " Возраст " + age + " Мама - " + mother.name + " Папа - " + father.name;
-            }
-
-
+        String genderStr;
+        if (gender) {
+            genderStr = "Женский";
+        } else {
+            genderStr = "Мужской";
         }
+
+        if (mother == null || father == null){
+            return String.format("Имя - %s,  пол - %s, Возраст - %d", name, genderStr, age);
+        }else {
+            return String.format("Имя - %s,  пол - %s, Возраст - %d, Мама - %s, Папа - %s", name, genderStr, age, mother.name, father.name);
+        }
+
+
+
 
     }
 }
