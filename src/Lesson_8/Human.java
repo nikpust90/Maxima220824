@@ -21,22 +21,17 @@ public class Human {
         this.father = father;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String toString(){
-        String genderStr;
-        if (gender) {
-            genderStr = "Женский";
-        } else {
-            genderStr = "Мужской";
-        }
+        String genderStr = gender ?"Женский":"Мужской";
 
-        if (mother == null || father == null){
-            return String.format("Имя - %s,  пол - %s, Возраст - %d", name, genderStr, age);
-        }else {
-            return String.format("Имя - %s,  пол - %s, Возраст - %d, Мама - %s, Папа - %s", name, genderStr, age, mother.name, father.name);
-        }
+        String motherName = mother == null ?"Неопределено":mother.getName();
+        String fatherName = father == null ?"Неопределено":father.getName();
 
-
-
+        return String.format("Имя - %s,  пол - %s, Возраст - %d, Мама - %s, Папа - %s", name, genderStr, age, motherName, fatherName);
 
     }
 }
