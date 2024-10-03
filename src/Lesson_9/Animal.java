@@ -17,15 +17,15 @@ public class Animal {
         this.location = location;
     }
 
-    void makeNoise(){
+    public void makeNoise(){
         System.out.println(" шумит ");
     }
 
-    void eat(){
+    public void eat(){
         System.out.println(" ест");
     }
 
-    void sleep(){
+    public void sleep(){
         System.out.println("Животное спит");
     }
 

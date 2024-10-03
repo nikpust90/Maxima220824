@@ -1,25 +1,25 @@
 package Lesson_9;
 
 public class Dog extends Animal{
-    private String naimDog;
+    private String nameDog;
     private String animalFormDog;
 
 
     public Dog(String food, String location, String naimDog, String animalFormDog) {
         super(food, location);
-        this.naimDog = naimDog;
+        this.nameDog = nameDog;
         this.animalFormDog = animalFormDog;
     }
 
     @Override
-    void makeNoise() {
-        System.out.println(naimDog + " ");
+    public void makeNoise() {
+        System.out.println(nameDog + " ");
         super.makeNoise();
     }
 
     @Override
-    void eat() {
-        System.out.println(naimDog + " ");
+    public void eat() {
+        System.out.println(nameDog + " ");
         super.eat();
     }
 }

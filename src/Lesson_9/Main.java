@@ -7,9 +7,10 @@ public class Main {
         animal[1] = new Cat("Рыба", "Юг", "Барсик", "Кот");
         animal[2] = new Horse("Сено", "Центр", "Любимчик", "Лошадь");
 
+        Veterinarian veterinarian = new Veterinarian();
         for (int i = 0; i < 3; i++) {
 
-            new Veterinarian().treatAnimal(animal[i]);
+            veterinarian.treatAnimal(animal[i]);
 
         }
 

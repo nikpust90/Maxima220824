@@ -1,24 +1,26 @@
 package Lesson_9.work_3;
 
 public class Person {
-    private String fullNaim;
+    private String fullName;
     private int age;
 
     public Person() {
     }
 
-    public Person(String fullNaim, int age) {
-        this.fullNaim = fullNaim;
+    public Person(String fullName, int age) {
+        this.fullName = fullName;
         this.age = age;
     }
 
-    void move(){
+    public void move(){
+        String fullNameTrue = fullName == null ?"Person":fullName;
         System.out.println(String.format("%s идет",
-                fullNaim));
+                fullNameTrue));
     }
 
-    void talk(){
+    public void talk(){
+        String fullNameTrue = fullName == null ?"Person":fullName;
         System.out.println(String.format("%s говорит",
-                fullNaim));
+                fullNameTrue));
     }
 }
