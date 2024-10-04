@@ -1,24 +1,24 @@
 package Lesson_9;
 
 public class Cat extends Animal{
-    private String nameCat;
-    private String animalFormCat;
+    private String name;
+    private String animalForm;
 
     public Cat(String food, String location, String naimCat, String animalFormCat) {
         super(food, location);
-        this.nameCat = naimCat;
-        this.animalFormCat = animalFormCat;
+        this.name = name;
+        this.animalForm = animalForm;
     }
 
     @Override
     public void makeNoise() {
-        System.out.println(nameCat + " ");
+        System.out.println(name + " ");
         super.makeNoise();
     }
 
     @Override
     public void eat() {
-        System.out.println(nameCat + " ");
+        System.out.println(name + " ");
         super.eat();
     }
 }
