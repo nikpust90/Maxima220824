@@ -19,15 +19,14 @@ public class work_2 {
 
         }
 
-        List<String> strMax = new ArrayList<>();
-        int longStrMax = listStrings.get(0).length();
+        int longString = listStrings.get(0).length();
         for (int i = 1; i < listStrings.size(); i++) {
-            if (longStrMax < listStrings.get(i).length()){
-                longStrMax = listStrings.get(i).length();
+            if (longString < listStrings.get(i).length()){
+                longString = listStrings.get(i).length();
             }
         }
         for (int i = 0; i < listStrings.size(); i++) {
-            if (longStrMax == listStrings.get(i).length()){
+            if (longString == listStrings.get(i).length()){
                 System.out.println(listStrings.get(i));
             }
 
