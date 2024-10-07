@@ -20,14 +20,14 @@ public class work_3 {
 
         }
 
-        int shortString = listStrings.get(0).length();
+        int minLength = listStrings.get(0).length();
         for (int i = 1; i < listStrings.size(); i++) {
-            if (shortString > listStrings.get(i).length()){
-                shortString = listStrings.get(i).length();
+            if (minLength > listStrings.get(i).length()){
+                minLength = listStrings.get(i).length();
             }
         }
         for (int i = 0; i < listStrings.size(); i++) {
-            if (shortString == listStrings.get(i).length()){
+            if (minLength == listStrings.get(i).length()){
                 System.out.println(listStrings.get(i));
             }
 

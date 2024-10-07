@@ -19,14 +19,14 @@ public class work_2 {
 
         }
 
-        int longString = listStrings.get(0).length();
+        int maxLength = listStrings.get(0).length();
         for (int i = 1; i < listStrings.size(); i++) {
-            if (longString < listStrings.get(i).length()){
-                longString = listStrings.get(i).length();
+            if (maxLength < listStrings.get(i).length()){
+                maxLength = listStrings.get(i).length();
             }
         }
         for (int i = 0; i < listStrings.size(); i++) {
-            if (longString == listStrings.get(i).length()){
+            if (maxLength == listStrings.get(i).length()){
                 System.out.println(listStrings.get(i));
             }
 
