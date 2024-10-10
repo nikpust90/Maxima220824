@@ -26,11 +26,7 @@ public class Work_7 {
         int number;
         for (int i = 0; i < 20; i++){
             number = scanner.nextInt();
-            if (number%3==0 && number%2==0){
-                listDivisionOnTwo.add(number);
-                listDivisionOnTrm.add(number);
-                continue;
-            }
+
             if (number%3 == 0){
                 listDivisionOnTrm.add(number);
             }

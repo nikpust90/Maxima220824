@@ -18,25 +18,25 @@ public class work_6 {
             listStrings.add(scanner.nextLine());
         }
 
-        //находим самую короткую строку и ее индекс
+        //находим самую короткую и длинную строки и  индексы
         int maxLength = listStrings.get(0).length();
         int maxIndex = 0;
+
+        int minLength = listStrings.get(0).length();
+        int minIndex = 0;
+
         for (int i = 1; i < listStrings.size(); i++) {
             if (maxLength < listStrings.get(i).length()){
                 maxLength = listStrings.get(i).length();
                 maxIndex = listStrings.indexOf(listStrings.get(i));
             }
-        }
-
-        //находим самую длинную строку и ее индекс
-        int minLength = listStrings.get(0).length();
-        int minIndex = 0;
-        for (int i = 1; i < listStrings.size(); i++) {
             if (minLength > listStrings.get(i).length()){
                 minLength = listStrings.get(i).length();
                 minIndex = listStrings.indexOf(listStrings.get(i));
             }
         }
+
+
 
         //определяем ближайший индекс между мин. и максим.
         int leastIndex = Math.min(maxIndex, minIndex);
