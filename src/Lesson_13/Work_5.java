@@ -1,0 +1,41 @@
+package Lesson_13;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Spliterator;
+import java.util.stream.Collectors;
+
+public class Work_5 {
+    public static void main(String[] args) {
+        //5
+        //
+        //
+        //1. Введи с клавиатуры 10 слов в список строк.
+        //2. Определить, является ли список упорядоченным по возрастанию длины строки.
+        //3. В случае отрицательного ответа вывести на экран индекс первого элемента, нарушающего такую упорядоченность.
+
+
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            list.add(scanner.nextLine());
+        }
+
+        boolean sortList = list.stream().sorted().toList().equals(list);
+        //boolean isSorted = list.stream().sorted().spliterator().hasCharacteristics(Spliterator.SORTED);
+
+        int index;
+        if (sortList == false) {
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).length() > list.get(i+1).length()){
+                    index = i+1;
+                    System.out.println(index);
+                    break;
+
+                }
+
+            }
+        }
+
+    }
+}
