@@ -36,19 +36,19 @@ public class Coin implements Comparable<Coin>{
             return this.price - coin.price;
 
         }
-        if (this.price.equals(coin.price) && !this.nominal.equals(coin.nominal) && !this.country.equals(coin.country)) {
+        if (!this.nominal.equals(coin.nominal)) {
             return this.nominal - coin.nominal;
 
         }
-        if (this.price.equals(coin.price) && this.nominal.equals(coin.nominal) && !this.country.equals(coin.country)) {
-            return this.country.length() - coin.country.length();
+        if (!this.country.equals(coin.country)) {
+            return this.country.compareTo(coin.country);
 
         }
-        if (this.price.equals(coin.price) && this.nominal.equals(coin.nominal) && this.country.equals(coin.country)) {
-            return (int) (this.diameter - coin.diameter);
 
-        }
-        return 0;
+        return (int) (this.diameter - coin.diameter);
+
+
+
     }
 
 
