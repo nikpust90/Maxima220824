@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Work_3{
     public static void main(String[] args) {
@@ -19,40 +20,40 @@ public class Work_3{
         //
         //
 
-        ArrayList<String> strings = new ArrayList<String>();
+        List<String> strings = new ArrayList<String>();
         strings.add("роза");
         strings.add("лоза");
         strings.add("лира");
         strings = fix(strings);
 
-
         for (String string : strings) {
             System.out.println(string);
         }
-
-
     }
 
-
-
-    public static ArrayList<String> fix(ArrayList<String> strings) {
+    public static List<String> fix(List<String> strings) {
         //напишите тут ваш код
+        //создаем потоки
+        Stream<String> OneStream = strings.stream();
 
-        //находим все слова с буквой "л" и добавляем их в результирующий список
-        List<String> resultList = strings.stream()
+        List<String> oneList = strings.stream()
                 .filter(s -> s.startsWith("л"))
                 .toList();
+        Stream<String> TwoStream = oneList.stream();
 
-        //добавляем все элементы списка  resultList в список strings
-        for (int i = 0; i < resultList.size(); i++) {
-            strings.add(resultList.get(i));
+        //объединяем два потока
+        Stream<String> resultStream = Stream.concat(OneStream, TwoStream);
+        //сохраняем результат в список
+        List<String> resultList1 = resultStream.toList();
+        //удаляем по условию от обратного
+        List<String> finalList = resultList1.stream()
+                .filter(s ->  (!s.contains("р") ||(s.contains("р") && s.contains("л"))))
+                .toList();
 
-        }
 
-        //удаляем элементы по условию
-        strings.removeIf(element -> element.contains("р") && !element.contains("л")); //2.1
 
-        return strings;
+
+        return finalList;
     }
 
 

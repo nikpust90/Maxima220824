@@ -21,21 +21,15 @@ public class Work_5 {
             list.add(scanner.nextLine());
         }
 
-        boolean sortList = list.stream().sorted().toList().equals(list);
-        //boolean isSorted = list.stream().sorted().spliterator().hasCharacteristics(Spliterator.SORTED);
+        int index = 0;
 
-        int index;
-        if (sortList == false) {
-            for (int i = 0; i < list.size(); i++) {
-                if (list.get(i).length() > list.get(i+1).length()){
-                    index = i+1;
-                    System.out.println(index);
-                    break;
-
-                }
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).length() > list.get(i + 1).length()) {
+                index = i + 1;
+                System.out.println(index);
+                break;
 
             }
         }
-
     }
 }
