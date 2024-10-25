@@ -44,16 +44,17 @@ public class Work_3{
         //объединяем два потока
         Stream<String> resultStream = Stream.concat(OneStream, TwoStream);
         //сохраняем результат в список
-        List<String> resultList1 = resultStream.toList();
-        //удаляем по условию от обратного
-        List<String> finalList = resultList1.stream()
-                .filter(s ->  (!s.contains("р") ||(s.contains("р") && s.contains("л"))))
+        List<String> resultList1 = new ArrayList<>(resultStream.toList());
+        //удаляем по условию
+        List<String> removeList = resultList1.stream()
+                .filter(s ->  s.contains("р")  && !s.contains("л"))
                 .toList();
+        resultList1.removeAll(removeList);
 
 
 
 
-        return finalList;
+        return resultList1;
     }
 
 
