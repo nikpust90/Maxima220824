@@ -33,28 +33,25 @@ public class Work_3{
 
     public static List<String> fix(List<String> strings) {
         //напишите тут ваш код
-        //создаем потоки
-        Stream<String> OneStream = strings.stream();
+
 
         List<String> oneList = strings.stream()
-                .filter(s -> s.startsWith("л"))
+
+                .flatMap(s -> {
+                    if (s.contains("л") && s.contains("р")){
+                        return Stream.of(s);
+                    } else if (s.contains("л")){
+                        return Stream.of(s + s);
+                    } else {
+                        return Stream.empty();
+                    }
+                })
                 .toList();
-        Stream<String> TwoStream = oneList.stream();
-
-        //объединяем два потока
-        Stream<String> resultStream = Stream.concat(OneStream, TwoStream);
-        //сохраняем результат в список
-        List<String> resultList1 = new ArrayList<>(resultStream.toList());
-        //удаляем по условию
-        List<String> removeList = resultList1.stream()
-                .filter(s ->  s.contains("р")  && !s.contains("л"))
-                .toList();
-        resultList1.removeAll(removeList);
 
 
 
 
-        return resultList1;
+        return oneList;
     }
 
 
