@@ -37,6 +37,8 @@ public class Work_3 {
         String city = scanner.nextLine();
         if (map.containsKey(city)) {
             System.out.println(map.get(city));
+        } else{
+            System.out.println("Такого города нет");
         }
     }
 

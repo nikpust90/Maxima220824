@@ -30,13 +30,11 @@ public class Work_2 {
         Scanner scanner = new Scanner(System.in);
         String month = scanner.nextLine();
 
-        Integer numberMonth = months.get(month);
-        if (numberMonth == null) {
-            System.out.println("Invalid month");
+        if (months.containsKey(month)) {
+            System.out.println(String.format("%s is the %s month",month, months.get(month)));
         } else {
-            System.out.println(month + " is the " + numberMonth + " month");
+            System.out.println("Invalid month");
         }
-
 
 
     }
